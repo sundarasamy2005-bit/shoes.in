@@ -1,0 +1,278 @@
+/* --- LOGIN OVERLAY --- */
+.login-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10, 10, 10, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  backdrop-filter: blur(8px);
+}
+
+.login-card {
+  background: #1a1a2e;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 50px rgba(0, 198, 251, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  position: relative;
+  min-height: 500px; /* Keeps card stable during view switches */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --- ANIMATIONS --- */
+.slide-in-view {
+  animation: fadeInView 0.4s ease-out;
+  width: 100%;
+}
+
+@keyframes fadeInView {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* --- HEADERS --- */
+.login-title {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  background: linear-gradient(to right, #00c6fb, #005bea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.login-subtitle {
+  color: #a0aec0;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+/* --- FORMS & INPUTS --- */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #16213e;
+  color: white;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.login-input:focus {
+  border-color: #00c6fb;
+  box-shadow: 0 0 10px rgba(0, 198, 251, 0.3);
+  outline: none;
+}
+
+/* --- BUTTONS --- */
+.login-btn {
+  background: linear-gradient(90deg, #00c6fb, #005bea);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 198, 251, 0.4);
+}
+
+.glow-hover-orange {
+  background: linear-gradient(90deg, #ff9900, #ff5e00);
+}
+
+/* --- TEXT LINKS --- */
+.form-options {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.85rem;
+}
+
+.link-text {
+  color: #00c6fb;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-text:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 8px #00c6fb;
+}
+
+/* --- DIVIDER & SOCIAL --- */
+.divider {
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+}
+
+.divider span {
+  background: #1a1a2e;
+  padding: 0 10px;
+  color: #666;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 0; width: 100%;
+  height: 1px;
+  background: #333;
+  z-index: 0;
+}
+
+.social-login-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.social-btn svg { display: block; }
+
+.social-btn.google { background: white; color: #333; }
+.social-btn.google:hover { background: #f1f1f1; }
+
+.social-btn.facebook { background: #1877F2; color: white; }
+.social-btn.facebook:hover { background: #166fe5; }
+
+/* --- PROVIDER HEADERS (Google/FB Forms) --- */
+.provider-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.back-arrow {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #aaa;
+  margin-right: 15px;
+  transition: 0.2s;
+}
+
+.back-arrow:hover { color: white; transform: translateX(-3px); }
+
+.switch-auth {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #a0aec0;
+}
+
+/* ... [Previous CSS] ... */
+
+/* --- NEW BACK BUTTON STYLING (Top Left Corner) --- */
+.back-arrow-top-left {
+  position: absolute;
+  top: 25px;  /* Aligned with the close button height */
+  left: 25px; /* Far left corner */
+  color: #a0aec0;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.back-arrow-top-left:hover {
+  color: #00c6fb;
+  transform: translateX(-3px);
+}
+
+/* ... [Rest of existing CSS] ... */
+
+/* --- GLOBAL ANIMATED CLOSE BUTTON --- */
+.btn-close-animated {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 1000;
+  background: white;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(51, 51, 51);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-close-animated:hover {
+  transform: scale(1.1) rotate(90deg); /* Rotation Animation */
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 198, 251, 0.6); /* Cyan Glow */
+  border-color: #00c6fb;
+  color: #00c6fb;
+}
+
+/* ... [Previous CSS Remains] ... */
+
+/* --- NEW BACK BUTTON STYLING (Top Left Corner) --- */
+.back-arrow-top-left {
+  position: absolute;
+  top: 25px;  /* Aligned with the close button height */
+  left: 25px; /* Far left corner */
+  color: #a0aec0;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.back-arrow-top-left:hover {
+  color: #00c6fb;
+  transform: translateX(-3px);
+}
+
+/* ... [Rest of existing CSS] ... */

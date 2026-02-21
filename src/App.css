@@ -1,0 +1,5275 @@
+/* --- CLEAN DEFAULT DARK PREMIUM BACKGROUND --- */
+body {
+  background-color: #0f172a;
+  color: #ffffff;
+  transition: none;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Source Sans Pro',
+    sans-serif;
+}
+
+/* --- Optimized 5-Column Grid --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  padding: 30px;
+}
+
+/* --- Product Card Styles with Static Glow (NO ANIMATION) --- */
+.product-card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 15px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #334155;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.25);
+  animation: none !important;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0, 140, 255, 0.5);
+  border-color: #00bfff;
+}
+
+.product-card img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2d3748;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.brand-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #7aa7e9;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.product-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00ff88;
+  margin: 4px 0;
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(135deg, #7aa7e9 0%, #9cc2f0 100%);
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.add-to-cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(122, 167, 233, 0.4);
+}
+
+/* --- 360° Viewer Styles --- */
+.product-card-360 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+}
+
+.product-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: rgba(0, 255, 204, 0.15);
+  color: #00ffcc;
+  font-size: 26px;
+  border: 2px solid #00ffcc;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #00ffcc;
+  color: #000;
+  box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+  transform: scale(1.1);
+}
+
+.thumbnails, .thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.thumb {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+.thumb.active {
+  opacity: 1;
+  border-color: #00ffcc;
+}
+
+.main-image img {
+  width: 420px;
+  max-width: 90%;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  z-index: 9999;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+/* --- Navbar Styles --- */
+.navbar {
+  background-color: #1f2a44;
+  color: #ffffff;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #333333;
+}
+
+/* --- Home Button Hover Animation --- */
+.home-btn {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  background: #febd69; /* Amazon Orange on hover */
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* --- Brand Logo Alignment --- */
+.brand-animation {
+  display: flex;
+  justify-content: space-evenly;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.login-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 10px;
+.other-shoes {
+  width: 100%;
+  margin-top: 60px;
+  padding: 0 40px;
+}
+
+.other-shoes h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.other-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.other-card {
+  background: #111;
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.other-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+}
+
+.other-card p {
+  color: #ccc;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.other-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 15px #00ffcc;
+}
+  margin: 15px 0;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+}
+
+.login-card button {
+  width: 100%;
+  background: #f0c14b;
+  border: 1px solid #a88734;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+/* Back to Home Hover Effect */
+.home-btn:hover {
+  background: #febd69 !important;
+  color: black !important;
+  transition: 0.3s;
+}
+
+/* --- Moving Backend Animation --- */
+.App, .login-overlay {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- Fixed 5x5 Product Grid --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Exactly 5 items per row */
+  gap: 15px;
+  padding: 20px;
+}
+
+/* --- Brand Row Alignment Fix --- */
+.brand-animation {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  backdrop-filter: blur(5px);
+}
+
+/* --- Login Card Styling --- */
+.login-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 350px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* --- Moving Background for Login & App --- */
+.login-overlay, .App {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- Glassmorphism Login Card --- */
+.login-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-toggle {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.login-toggle button {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.login-toggle button.active {
+  color: #e47911;
+  border-bottom: 2px solid #e47911;
+  font-weight: bold;
+}
+
+.auth-btn {
+  background: #f0c14b;
+  border: 1px solid #a88734;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.auth-btn:hover {
+  background: #febd69; /* Amazon orange hover */
+  transform: scale(1.02);
+}
+
+/* --- Global Moving Background Animation --- */
+.App, .login-overlay {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- Clean Glassmorphism Login Card --- */
+.login-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 10px;
+  width: 360px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.auth-btn {
+  width: 100%;
+  background: #f0c14b;
+  border: 1px solid #a88734;
+  padding: 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.auth-btn:hover {
+  background: #febd69; /* Amazon premium hover color */
+}
+
+/* --- Fixed 5x5 Product Grid --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Exactly 5 products per row */
+  gap: 15px;
+  padding: 20px;
+}
+
+/* src/App.css */
+.brand-animation {
+  display: flex;
+  justify-content: space-around; /* Distributes logos evenly */
+  align-items: center;
+  background: #00bcd4; /* Light blue banner from your design */
+  padding: 20px;
+}
+
+.brand-animation img {
+  height: 60px;
+  width: auto;
+}
+
+/* src/App.css */
+.brand-animation {
+  display: flex;
+  justify-content: space-evenly; /* Distributes logos horizontally */
+  align-items: center;
+  background: #00bcd4; /* Brand banner background color */
+  padding: 20px;
+  overflow: hidden;
+}
+
+.brand-animation img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+/* --- Combined Moving Background --- */
+.App, .login-overlay {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- Login Card UI --- */
+.login-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.85); /* Translucent glass effect */
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* --- Fix Brand Overlap --- */
+.brand-animation {
+  display: flex;
+  justify-content: space-evenly; /* Aligns Nike and Adidas in a row */
+  align-items: center;
+  padding: 20px;
+}
+
+/* Moving Background */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 5x5 Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Exactly 5 shoes per row */
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Size Button Styling */
+.size-btn {
+  background: #1f2933;
+  border: 1px solid #333333;
+  color: #ffffff;
+  margin: 0 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  animation: none !important;
+}
+
+.size-btn:hover {
+  background: #febd69;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(254, 189, 105, 0.4);
+}
+
+.size-btn.glow {
+  background-color: #febd69 !important;
+  color: black;
+  border-color: #a88734;
+  box-shadow: 0 0 15px #febd69;
+  transform: scale(1.1);
+}
+
+/* Remove duplicate price display */
+.sidebar .price-filter:last-child {
+  display: none;
+}
+
+/* Moving Gradient Animation */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Strict 5-Shoe Row */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Interactive Button Styling */
+.size-btn.active {
+  background-color: #febd69 !important;
+  color: black;
+  border-color: #a88734;
+}
+
+.home-btn {
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* src/App.css */
+.brand-animation {
+  display: flex;
+  justify-content: space-around; /* Spaced evenly in a row */
+  align-items: center;
+  background-color: #00bcd4; /* Light blue background from your design */
+  padding: 15px;
+  width: 100%;
+}
+
+.brand-animation img {
+  height: 50px; /* Consistent height for all logos */
+  width: auto;
+}
+
+/* Fix for overlapping brand logos */
+.brand-animation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #00bcd4;
+  padding: 15px;
+}
+
+.brand-animation img {
+  height: 50px;
+  width: auto;
+}
+
+/* Strict 5x5 Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Moving Background Animation */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Color transition for the Back to Home button */
+.home-btn {
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  transition: background-color 0.4s ease, transform 0.2s;
+  cursor: pointer;
+}
+
+.home-btn:active {
+  transform: scale(0.95); /* Button moves/shrinks slightly when clicked */
+}
+
+/* Sign-In button styling */
+.signin-emoji-btn {
+  background: #f3f3f3;
+  border: 1px solid #bbb;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.signin-emoji-btn:hover {
+  background: #e7e7e7;
+}
+
+/* Product grid enforcement */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Color transition for Home Button */
+.home-btn {
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  transition: background-color 0.4s ease;
+  cursor: pointer;
+}
+
+/* Sign-In emoji button styling */
+.signin-btn {
+  background: #f3f3f3;
+  border: 1px solid #bbb;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* 5x5 Grid enforcement */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+/* Back to Home Button Transition */
+.home-btn {
+  color: white; /* Font color stays white */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.4s ease;
+  cursor: pointer;
+}
+
+/* Sign-In emoji button styling */
+.signin-emoji-btn {
+  background: #f3f3f3;
+  border: 1px solid #bbb;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Ensure Exactly 5 shoes per row */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+/* Moving Background ONLY for the main App */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Static Nav Bar */
+.navbar {
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #d1d5db;
+}
+
+/* Glowing effect for selected shoe size */
+.size-btn.glow {
+  background-color: #febd69 !important;
+  color: black;
+  border-color: #a88734;
+  box-shadow: 0 0 15px #febd69; /* Glowing effect */
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Moving animation for Brand Banner */
+.brand-animation {
+  display: flex;
+  overflow: hidden;
+  background-color: #00bcd4;
+  padding: 15px 0;
+}
+
+.brand-animation-content {
+  display: flex;
+  animation: scrollBrands 20s linear infinite; /* Moving brands logic */
+}
+
+@keyframes scrollBrands {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Amazon.in centered branding */
+.navbar .logo {
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* Glowing effect for selected shoe size */
+.size-btn.glow {
+  background-color: #febd69 !important;
+  color: black;
+  border-color: #a88734;
+  box-shadow: 0 0 15px #febd69; /* Glow effect */
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Moving animation for Brand Banner */
+.brand-animation {
+  display: flex;
+  overflow: hidden;
+  background-color: #00bcd4;
+  padding: 15px 0;
+}
+
+.brand-animation-content {
+  display: flex;
+  animation: scrollBrands 20s linear infinite; /* Keeps brands moving */
+}
+
+@keyframes scrollBrands {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Container for the moving brand logos */
+.brand-animation {
+  width: 100%;
+  overflow: hidden;
+  background-color: #00bcd4; /* Brand banner color */
+  padding: 15px 0;
+  white-space: nowrap;
+}
+
+/* The moving content */
+.brand-animation-content {
+  display: inline-flex;
+  gap: 50px;
+  animation: scrollBrands 20s linear infinite; /* Animation to move brands */
+}
+
+@keyframes scrollBrands {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Loops the brands continuously */
+}
+
+/* Glowing effect for selected shoe size */
+.size-btn.glow {
+  background-color: #febd69 !important;
+  box-shadow: 0 0 15px #febd69;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Moving animation for Brand Banner */
+.brand-animation-content {
+  display: flex;
+  gap: 50px;
+  animation: scrollBrands 20s linear infinite;
+}
+
+@keyframes scrollBrands {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Glowing effect for shoe sizes */
+.size-btn.glow {
+  background-color: #febd69 !important;
+  box-shadow: 0 0 15px #febd69;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.product-image {
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.view-360-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #febd69;
+  color: black;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* New Brand Bar Styling */
+.brand-bar-new {
+  background-color: #232f3e;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  border-top: 1px solid #37475a;
+}
+
+/* Brand Name Font Color Change on Hover */
+.brand-item-link {
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.brand-item-link:hover {
+  color: #febd69; /* Amazon Orange when cursor moves over it */
+}
+
+.brand-item-link.active {
+  color: #febd69;
+  text-decoration: underline;
+}
+
+/* Glowing effect for selected shoe size */
+.size-btn.glow {
+  background-color: #febd69 !important; /* Amazon Orange */
+  color: black !important;
+  border-color: #a88734;
+  box-shadow: 0 0 15px #febd69; /* The glowing color */
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Base size button style to maintain nav look */
+.size-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  padding: 2px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.nav-size-row {
+  padding: 10px 20px;
+  background-color: #37475a; /* Slightly lighter nav section */
+  display: flex;
+  align-items: center;
+}
+
+/* Sign In button placement */
+.signin-emoji-btn {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+/* Glowing font for brand names in the new bar */
+.brand-name-item {
+  color: white;
+  cursor: pointer;
+  padding: 0 15px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.brand-name-item.glow-text {
+  color: #febd69; /* Amazon Orange */
+  text-shadow: 0 0 10px #febd69; /* Glowing effect for names */
+  transform: scale(1.1);
+}
+
+/* Glowing effect for selected shoe size */
+.size-btn.glow {
+  background-color: #febd69 !important;
+  color: black !important;
+  box-shadow: 0 0 15px #febd69;
+  transform: scale(1.1);
+}
+
+.brand-glow-bar {
+  background-color: #232f3e;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #37475a;
+}
+
+/* --- Login Modal --- */
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.login-card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.login-card h2 {
+  margin-top: 0;
+  color: #232f3e;
+  text-align: center;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: #84cafc;
+  box-shadow: 0 0 5px rgba(132, 202, 252, 0.3);
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: #84cafc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-card button:hover {
+  background: #738bc0;
+}
+
+/* --- Menu Button & Price Filter Styles --- */
+.menu-btn {
+  font-size: 22px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: #f0f0f0;
+  border-color: #84cafc;
+  transform: scale(1.05);
+}
+
+.price-bar {
+  display: flex;
+  gap: 10px;
+  margin: 15px 20px;
+  align-items: center;
+  padding: 12px 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.price-bar input {
+  width: 120px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.price-bar input:focus {
+  outline: none;
+  border-color: #84cafc;
+  box-shadow: 0 0 5px rgba(132, 202, 252, 0.3);
+}
+
+/* --- Background Toggle Button --- */
+.bg-toggle {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: transform 0.3s ease;
+}
+
+.bg-toggle:hover {
+  transform: scale(1.15);
+}
+
+.price-bar span {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* --- General Button Styling --- */
+button {
+  background: #1f2933;
+  color: #ffffff;
+  border: 1px solid #333333;
+  transition: all 0.3s ease;
+  animation: none !important;
+}
+
+/* --- Special Button Exceptions --- */
+.menu-btn {
+  background: transparent !important;
+  border: 1px solid #333333 !important;
+}
+
+.signin-btn,
+.logout-btn {
+  background: #ff9900 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.signin-btn:hover,
+.logout-btn:hover {
+  box-shadow: 0 0 12px rgba(255, 153, 0, 0.5) !important;
+}
+
+/* --- Brand Logo Glow Effects (Static) --- */
+.brand img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  animation: none !important;
+}
+
+.brand img:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 12px rgba(0, 184, 255, 0.6));
+}
+
+/* --- Subtle Glow Pulse Animation --- */
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 5px rgba(0, 150, 255, 0.3); }
+  50% { box-shadow: 0 0 15px rgba(0, 150, 255, 0.7); }
+  100% { box-shadow: 0 0 5px rgba(0, 150, 255, 0.3); }
+}
+
+.glow-btn {
+  animation: glowPulse 2.5s infinite;
+}
+
+/* --- Product Page Gallery Styles --- */
+.product-page {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  align-items: flex-start;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.thumb {
+  width: 68px;
+  height: 68px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+
+.thumb.active {
+  border-color: #7aa7e9;
+}
+
+.main-image img {
+  width: 420px;
+  height: 420px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #1f2937;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 360px;
+}
+
+.details .price {
+  font-size: 22px;
+  color: #00ff88;
+  font-weight: 800;
+}
+
+.shoe-image { cursor: pointer; }
+
+/* --- Product Page Layout --- */
+.product-page-wrapper {
+  background-color: #f0f2f5; /* Light grey background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.compact-card {
+  background: white;
+  width: 100%;
+  max-width: 1100px; /* Limits width for "compact" look */
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+}
+
+.close-corner-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
+  z-index: 10;
+}
+
+.product-main-layout {
+  display: grid;
+  grid-template-columns: 80px 1.2fr 1fr; /* The 3-Column Layout */
+  gap: 30px;
+}
+
+/* 1. Left Sidebar (Thumbnails) */
+.thumbs-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.thumb-box {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.thumb-box.active {
+  border: 2px solid #007185; /* Amazon Blue */
+  box-shadow: 0 0 5px rgba(0, 113, 133, 0.3);
+}
+
+.thumb-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 2. Center Stage (Main Image) */
+.main-image-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fdfdfd;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.hero-image {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.hero-image:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.click-hint {
+  margin-top: 15px;
+  color: #007185;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* 3. Right Panel (Details) */
+.details-panel {
+  padding-left: 10px;
+}
+
+.brand-badge {
+  color: #007185;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-title {
+  font-size: 2rem;
+  margin: 5px 0 10px 0;
+  color: #333;
+}
+
+.rating-row {
+  margin-bottom: 15px;
+  color: #febd69; /* Star Yellow */
+}
+
+.rating-count {
+  color: #555;
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.current-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #B12704; /* Amazon Price Red */
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.discount {
+  color: #B12704;
+  font-weight: bold;
+}
+
+.description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.add-cart-btn {
+  flex: 1;
+  padding: 12px;
+  background: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.buy-now-btn {
+  flex: 1;
+  padding: 12px;
+  background: #ffa41c;
+  border: 1px solid #ff8f00;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Reviews Section */
+.reviews-mini-section {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.review-item {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.star-mini {
+  color: #febd69;
+}
+
+/* --- Unique Color Variables --- */
+:root {
+  --primary-orange: #ff9900;
+  --primary-yellow: #ffd814;
+  --dark-blue: #232f3e;
+  --accent-teal: #007600; /* For 'In Stock' or Verified */
+  --light-bg: #f3f3f3;
+}
+
+/* --- Review Section Styling --- */
+.reviews-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e7e7e7;
+}
+
+.reviews-section h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--primary-orange); /* Unique accent */
+  padding-left: 10px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive Grid */
+  gap: 20px;
+}
+
+.review-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  background-color: #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #555;
+}
+
+.review-user {
+  font-weight: bold;
+  font-size: 0.95rem;
+  display: block;
+}
+
+.verified-badge {
+  font-size: 0.75rem;
+  color: var(--accent-teal);
+  margin-left: 5px;
+}
+
+.star-row {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.stars-gold {
+  color: var(--primary-orange);
+  letter-spacing: 2px;
+}
+
+.review-comment {
+  color: #555;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* --- Button Unique Colors --- */
+.btn-cart {
+  background: var(--primary-yellow);
+  border: 1px solid #fcd200;
+  color: #111;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+  transition: transform 0.2s;
+}
+
+.btn-buy {
+  background: #fa8900; /* Deep Orange for Buy Now */
+  border: 1px solid #e37b00;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+  transition: transform 0.2s;
+}
+
+.btn-cart:hover, .btn-buy:hover {
+  transform: scale(1.03);
+}
+
+.save-badge {
+  background-color: #cc0c39;
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+/* --- Write a Review Form Styles --- */
+.write-review-container {
+  margin-top: 40px;
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.write-review-container h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 2px solid #ffd814;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-input, .form-select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-input {
+  flex: 2;
+}
+
+.form-select {
+  flex: 1;
+  cursor: pointer;
+}
+
+.form-textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  min-height: 80px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.btn-submit-review {
+  background-color: #ffd814;
+  border: 1px solid #fcd200;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start; /* Aligns button to left */
+  transition: background 0.2s;
+}
+
+.btn-submit-review:hover {
+  background-color: #f7ca00;
+}
+
+/* --- Unique Page Background --- */
+.product-page-wrapper {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Premium Gradient */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* --- Deep Shadows for Card --- */
+.compact-card {
+  background: white;
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2); /* Deep Shadow */
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
+  transition: transform 0.3s ease;
+}
+
+/* --- GLOWING BUTTONS --- */
+.glow-effect {
+  background: linear-gradient(45deg, #ffd814, #ffbf00);
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 191, 0, 0.4); /* Yellow Glow */
+  transition: all 0.3s ease;
+}
+
+.glow-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 191, 0, 0.6); /* Stronger Glow */
+}
+
+.glow-effect-orange {
+  background: linear-gradient(45deg, #ff9900, #ff5e00);
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 94, 0, 0.4); /* Orange Glow */
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.glow-effect-orange:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 94, 0, 0.6); /* Stronger Glow */
+}
+
+/* --- ANIMATIONS (SLIDES) --- */
+
+/* 1. Page Entry Animation */
+.slide-up-entry {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 2. Image Change Animation (Fade + Slide) */
+.fade-slide-in {
+  animation: fadeSlide 0.4s ease-out;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0.5; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* --- Card Hover Effects (Shadows) --- */
+.review-card.hover-lift {
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.review-card.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: #ffd814;
+}
+
+/* --- Review Form Styling --- */
+.write-review-container {
+  margin-top: 40px;
+  background: #f8faff;
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 5px solid #ffd814; /* Unique Accent */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form-input, .form-select, .form-textarea {
+  border: 2px solid #eee;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus, .form-textarea:focus {
+  border-color: #ffd814;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 216, 20, 0.3);
+}
+
+/* --- 1. Unique Page Background (Premium Gradient) --- */
+.product-page-wrapper {
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* --- 2. Main Card: Deep Shadow & Rounded Corners --- */
+.compact-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 20px;
+  /* Deep floating shadow effect */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); 
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- 3. Entry Animation (Slide Up) --- */
+.slide-up-card {
+  animation: slideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 4. Image Fade Animation --- */
+.fade-in-image {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.6; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* --- 5. Gold Glowing Stars --- */
+.star {
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+  margin-right: 2px;
+}
+
+.star.filled {
+  color: #ffb700; /* Gold Color */
+  text-shadow: 0 0 8px rgba(255, 183, 0, 0.6); /* Gold Glow */
+}
+
+.star.empty {
+  color: #e0e0e0;
+}
+
+/* --- 6. Neon Glowing Buttons --- */
+.glow-yellow {
+  background: linear-gradient(135deg, #ffd814, #ffc107);
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+  color: #111;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.glow-yellow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.6); /* Intense Glow */
+}
+
+.glow-orange {
+  background: linear-gradient(135deg, #ff9900, #ff5e00);
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 94, 0, 0.4);
+  color: white;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.glow-orange:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 94, 0, 0.6);
+}
+
+/* --- 7. Form Inputs Focus Glow --- */
+.glow-focus:focus {
+  border-color: #ffb700;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 183, 0, 0.2);
+}
+
+/* --- 8. Review Cards Hover Lift --- */
+.hover-float {
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.hover-float:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-color: #ffd814;
+}
+
+/* --- 9. Pulse Animation for "Save 25%" Badge --- */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* --- 1. Add to Cart Toast Notification --- */
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #007600; /* Success Green */
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slide-in-toast {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* --- 2. Enhanced Gold Stars --- */
+.star {
+  font-size: 1.3rem;
+  margin-right: 2px;
+  transition: transform 0.2s;
+}
+
+.star.filled {
+  color: #ffb700;
+  /* Gold Glow Effect */
+  text-shadow: 0 0 5px rgba(255, 183, 0, 0.6); 
+}
+
+.star.empty {
+  color: #e0e0e0;
+}
+
+.star-row .star {
+  font-size: 1rem; /* Smaller stars in review cards */
+}
+
+/* --- 3. Unique Glowing Cursor Buttons --- */
+.glow-hover {
+  background: linear-gradient(135deg, #ffd814, #ffc107);
+  border: none;
+  color: #111;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-hover:hover {
+  transform: translateY(-3px);
+  /* Strong Yellow Glow on Hover */
+  box-shadow: 0 0 20px rgba(255, 216, 20, 0.7); 
+}
+
+.glow-hover-orange {
+  background: linear-gradient(135deg, #ff9900, #ff5e00);
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.glow-hover-orange:hover {
+  transform: translateY(-3px);
+  /* Strong Orange Glow on Hover */
+  box-shadow: 0 0 20px rgba(255, 94, 0, 0.7);
+}
+
+/* --- 4. Product Specs List --- */
+.specs-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+  color: #555;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #ffd814;
+}
+
+.specs-list li {
+  margin-bottom: 8px;
+}
+
+/* --- 5. Review Date Styling --- */
+.review-date-small {
+  font-size: 0.75rem;
+  color: #888;
+  display: block;
+  margin-top: 2px;
+}
+
+/* --- MODAL OVERLAY --- */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dim background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 15px; right: 20px;
+  background: none; border: none;
+  font-size: 1.5rem; cursor: pointer; color: #555;
+}
+
+.modal-title { margin-top: 0; color: #333; }
+.modal-subtitle { color: #666; margin-bottom: 20px; font-size: 0.9rem; }
+
+/* --- PAYMENT FORM --- */
+.payment-form { display: flex; flex-direction: column; gap: 15px; }
+
+.form-group label {
+  display: block; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; color: #333;
+}
+
+.payment-form input, .payment-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Fixes padding overflow */
+}
+
+.form-grid-3 {
+  display: flex; gap: 10px;
+}
+
+.form-grid-3 input { flex: 1; }
+
+/* --- LOCATION BUTTONS --- */
+.location-tools {
+  display: flex; gap: 10px; margin-bottom: 5px;
+}
+
+.btn-detect-location {
+  flex: 2;
+  background: #e7f3ff;
+  color: #007185;
+  border: 1px solid #007185;
+  padding: 8px; border-radius: 6px;
+  cursor: pointer; font-weight: bold;
+  display: flex; align-items: center; justify-content: center; gap: 5px;
+}
+
+.btn-detect-location:hover { background: #d0e8ff; }
+
+.btn-reset-form {
+  flex: 1;
+  background: #f3f3f3;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px; border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-submit-order {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+/* --- REVIEW DELETE BUTTON --- */
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.user-info { display: flex; gap: 10px; align-items: center; }
+
+.btn-delete-review {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  padding: 5px;
+}
+
+.btn-delete-review:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  background: #fff0f0;
+  border-radius: 50%;
+}
+
+/* =========================================
+   1. AI-THEMED BACKGROUND & LAYOUT
+   ========================================= */
+.App {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Moving Holographic Background */
+.product-page-wrapper {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism Card (Frosted Glass Effect) */
+.compact-card {
+  background: rgba(255, 255, 255, 0.85); /* Semi-transparent */
+  backdrop-filter: blur(20px); /* The "Glass" blur */
+  -webkit-backdrop-filter: blur(20px);
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================
+   2. AI MODAL OVERLAY & GLOWING FORM
+   ========================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10, 10, 20, 0.85); /* Darker, tech-feel dim */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 520px;
+  position: relative;
+  /* Neon Blue/Purple Glow */
+  box-shadow: 0 0 50px rgba(78, 115, 223, 0.4), 0 0 20px rgba(0, 242, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  animation: modalPopIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes modalPopIn {
+  from { opacity: 0; transform: scale(0.8) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.close-modal-btn {
+  position: absolute; top: 20px; right: 25px;
+  background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #aaa;
+  transition: all 0.3s;
+}
+.close-modal-btn:hover { color: #ff3366; transform: rotate(90deg) scale(1.2); }
+
+.modal-title { 
+  margin-top: 0; 
+  background: linear-gradient(90deg, #232526, #414345);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* =========================================
+   3. CYBER BUTTONS & INPUTS
+   ========================================= */
+
+/* Shimmer Animation for Buy Button */
+.glow-hover-orange {
+  background: linear-gradient(45deg, #ff512f, #dd2476); /* Premium Pink/Orange */
+  border: none;
+  color: white; font-weight: bold;
+  position: relative; overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.glow-hover-orange::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.glow-hover-orange:hover::before {
+  left: 100%; /* Swipe effect */
+}
+
+.glow-hover-orange:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(221, 36, 118, 0.5);
+}
+
+/* Yellow Cart Button */
+.glow-hover {
+  background: linear-gradient(135deg, #fce38a, #f38181);
+  border: none; color: #fff; font-weight: bold;
+  transition: all 0.3s ease;
+}
+.glow-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(243, 129, 129, 0.5);
+}
+
+/* Inputs with Cyber Focus */
+.payment-form input, .payment-form textarea, .form-input, .form-textarea {
+  border: 2px solid #eef2f5;
+  background: #f8faff;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.payment-form input:focus, .form-input:focus {
+  outline: none;
+  background: #fff;
+  border-color: #4facfe; /* Cyber Blue */
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.3);
+}
+
+/* Location Button */
+.btn-detect-location {
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc); /* Soft magic gradient */
+  color: #4a4a4a; border: none;
+  padding: 10px; border-radius: 8px; cursor: pointer; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: all 0.3s;
+}
+.btn-detect-location:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(142, 197, 252, 0.5);
+}
+
+/* =========================================
+   4. PAYMENT FORM & LAYOUT
+   ========================================= */
+.payment-form { display: flex; flex-direction: column; gap: 18px; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 6px; color: #555; }
+.payment-form input, .payment-form textarea { width: 100%; padding: 12px; font-size: 1rem; }
+.form-grid-3 { display: flex; gap: 12px; }
+.form-grid-3 input { flex: 1; }
+.location-tools { display: flex; gap: 12px; margin-bottom: 5px; }
+
+.btn-reset-form {
+  flex: 1; background: #f0f0f0; color: #555; border: none;
+  border-radius: 8px; cursor: pointer; transition: all 0.3s;
+}
+.btn-reset-form:hover { background: #e0e0e0; color: #000; }
+.btn-submit-order { margin-top: 15px; padding: 14px; border-radius: 12px; font-size: 1.15rem; width: 100%; cursor: pointer;}
+
+/* =========================================
+   5. PRODUCT PAGE UTILITIES
+   ========================================= */
+.close-corner-btn {
+  position: absolute; top: 20px; right: 25px; font-size: 1.5rem; 
+  border: none; background: none; cursor: pointer; color: #888; 
+  z-index: 10; transition: 0.3s;
+}
+.close-corner-btn:hover { transform: rotate(90deg); color: #000; }
+
+.product-main-layout {
+  display: grid; grid-template-columns: 90px 1fr 1.2fr; gap: 30px; margin-bottom: 50px;
+}
+
+/* Star Ratings */
+.star.filled { color: #f9d71c; text-shadow: 0 0 10px rgba(249, 215, 28, 0.6); }
+
+/* Review Cards */
+.hover-float {
+  background: white; border: 1px solid #f0f0f0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.hover-float:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-color: #4facfe; /* Blue highlight */
+}
+
+/* Toast */
+.toast-notification {
+  position: fixed; top: 30px; right: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  color: #333; padding: 15px 25px; border-radius: 16px;
+  border-left: 5px solid #00c853;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  z-index: 3000; font-weight: 600;
+  display: flex; align-items: center; gap: 10px;
+  animation: slideInRight 0.5s forwards;
+}
+@keyframes slideInRight {
+  from { transform: translateX(120%); } to { transform: translateX(0); }
+}
+
+/* Animations */
+.slide-up-card { animation: slideUp 0.8s ease-out forwards; opacity: 0; transform: translateY(50px); }
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+.fade-in-image { animation: fadeIn 0.6s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.95); filter: blur(10px); } to { opacity: 1; transform: scale(1); filter: blur(0); } }
+
+/* Pulse Badge */
+.save-badge.pulse {
+  background: #ff3366; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;
+  animation: heartBeat 2s infinite;
+}
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.1); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.1); }
+  70% { transform: scale(1); }
+}
+
+/* ... [KEEP PREVIOUS CSS] ... */
+
+/* --- NEW GLOWING RED BUTTONS (Delete & Cancel) --- */
+.glow-hover-red {
+  background: transparent;
+  border: 2px solid transparent;
+  color: #ff4d4d;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.glow-hover-red:hover {
+  background: #ff4d4d;
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.6); /* Red Neon Glow */
+  transform: scale(1.1) rotate(90deg); /* Rotate effect for close button */
+}
+
+/* Delete button specific (no rotation) */
+.btn-delete-review.glow-hover-red:hover {
+  transform: scale(1.1); /* Only scale, don't rotate trash icon */
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.6);
+}
+
+/* --- NEW GLOWING BLUE BUTTON (Location) --- */
+.glow-hover-blue {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white; border: none;
+  transition: all 0.3s ease;
+}
+
+.glow-hover-blue:hover {
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.6); /* Cyan Glow */
+  transform: translateY(-2px);
+}
+
+/* --- BUTTON CLICK ANIMATION (Active State) --- */
+button:active {
+  transform: scale(0.95) !important; /* Shrink slightly on click */
+  filter: brightness(0.8); /* Darken slightly */
+}
+
+/* --- SPECS LIST STYLING --- */
+.specs-list {
+  list-style: none;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  border-left: 4px solid #4facfe; /* Cyber Blue Accent */
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  color: #333;
+  backdrop-filter: blur(5px);
+}
+
+.specs-list li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.specs-list li strong {
+  color: #111;
+  min-width: 80px;
+}
+
+/* --- ADJUST MODAL CLOSE BUTTON POSITION --- */
+.close-modal-btn {
+  width: 35px; height: 35px;
+  font-size: 1.2rem;
+  position: absolute; top: 15px; right: 15px;
+}
+
+.close-corner-btn {
+  width: 40px; height: 40px;
+  font-size: 1.5rem;
+  top: 30px; right: 30px;
+}
+
+/* ... [Keep Global Layout CSS] ... */
+
+/* --- 1. NEW SHOE DETAILS (CYBER COLOR THEME) --- */
+.specs-list {
+  list-style: none;
+  padding: 20px;
+  /* Dark AI Tech Background */
+  background: linear-gradient(145deg, #1a1a2e, #16213e); 
+  border-radius: 12px;
+  /* Neon Pink Border Accent */
+  border-left: 5px solid #ff0055; 
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  /* Neon Cyan Text */
+  color: #00f2fe; 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.specs-list:hover {
+  transform: translateX(5px); /* Slide effect on hover */
+  box-shadow: 0 5px 20px rgba(0, 242, 254, 0.2);
+}
+
+.specs-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 5px;
+}
+
+.specs-list li:last-child { border-bottom: none; }
+
+.specs-list strong {
+  color: #ffffff; /* White text for labels */
+  font-weight: 600;
+  min-width: 90px;
+}
+
+/* --- 2. REVIEW FORM (AI ANIMATION EFFECT) --- */
+.write-review-container {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* "Breathing" Animation - Form pulses subtly */
+.write-review-container {
+  animation: aiBreath 4s infinite alternate;
+}
+
+@keyframes aiBreath {
+  0% { box-shadow: 0 0 10px rgba(79, 172, 254, 0.1); border-color: rgba(79, 172, 254, 0.2); }
+  100% { box-shadow: 0 0 25px rgba(79, 172, 254, 0.4); border-color: rgba(79, 172, 254, 0.6); }
+}
+
+/* Focus Effect: Lights up when user types */
+.write-review-container:focus-within {
+  background: #fff;
+  box-shadow: 0 0 40px rgba(0, 242, 254, 0.5); /* Intense Cyan Glow */
+  transform: scale(1.01);
+  border-color: #00f2fe;
+}
+
+.write-review-container h4 {
+  margin-top: 0;
+  background: linear-gradient(90deg, #ff0055, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+/* --- 3. INPUT FIELD GLOWS --- */
+.form-input, .form-textarea, .form-select {
+  background: #f4f7f6;
+  border: 2px solid transparent;
+  transition: 0.3s;
+  color: #333;
+}
+
+.form-input:focus, .form-textarea:focus {
+  background: #ffffff;
+  border-color: #ff0055; /* Pink border on focus */
+  box-shadow: 0 0 15px rgba(255, 0, 85, 0.3);
+}
+
+/* =========================================
+   1. GLOBAL PAGE BACKGROUND (Teal AI Gradient)
+   ========================================= */
+.product-page-wrapper {
+  background: linear-gradient(135deg, #00c6fb 0%, #005bea 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Glassmorphism Main Card */
+.compact-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 1100px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================
+   2. SHOE DETAILS (CLEAN STYLE - COLORS REMOVED)
+   ========================================= */
+.specs-list {
+  list-style: none;
+  padding: 20px;
+  /* Changed from dark gradient to light gray */
+  background: #f8f9fa; 
+  border-radius: 12px;
+  /* Removed neon pink border, added subtle gray border */
+  border: 1px solid #e9ecef; 
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  /* Changed from neon cyan to dark gray text */
+  color: #555; 
+}
+
+.specs-list li {
+  display: flex;
+  justify-content: space-between;
+  /* Changed separator from light to dark gray */
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.specs-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.specs-list strong {
+  /* Changed from white to dark text */
+  color: #333; 
+  font-weight: 600;
+}
+
+/* =========================================
+   3. REVIEW FORM (BREATHING ANIMATION)
+   ========================================= */
+.write-review-container {
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #fff;
+  border: 2px solid transparent;
+  animation: neonBreath 3s infinite alternate;
+}
+
+@keyframes neonBreath {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 198, 251, 0.2);
+    border-color: rgba(0, 198, 251, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(0, 198, 251, 0.6);
+    border-color: #00c6fb;
+  }
+}
+
+.write-review-container h4 {
+  margin-top: 0;
+  background: linear-gradient(90deg, #ff0055, #00c6fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Form Inputs */
+.form-input, .form-textarea, .form-select {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+.form-input:focus, .form-textarea:focus {
+  background: #fff;
+  border-color: #ff0055;
+  box-shadow: 0 0 15px rgba(255, 0, 85, 0.2);
+  outline: none;
+}
+
+/* =========================================
+   4. GLOWING BUTTONS & BADGES
+   ========================================= */
+.save-badge.pulse {
+  background: #ff0055;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  animation: pulseRed 2s infinite;
+}
+
+@keyframes pulseRed {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 85, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 10px 10px rgba(255, 0, 85, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 85, 0); }
+}
+
+/* Delete Review Button (Glowing Red) */
+.btn-delete-review {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #ef4444;
+  transition: all 0.3s;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.btn-delete-review:hover {
+  background: #fee2e2;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Close/Cancel Buttons */
+.close-corner-btn, .close-modal-btn {
+  background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #64748b;
+  transition: 0.3s; position: absolute; right: 25px; top: 20px;
+}
+.close-corner-btn:hover { color: #ff0055; transform: rotate(90deg); }
+
+/* Main Buttons */
+.btn-buy.glow-hover-orange {
+  background: linear-gradient(135deg, #ff0055, #ff5e00);
+  box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4);
+}
+.btn-buy.glow-hover-orange:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 85, 0.8);
+}
+
+.btn-cart.glow-hover {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+}
+.btn-cart.glow-hover:hover {
+  box-shadow: 0 0 25px rgba(251, 191, 36, 0.8);
+}
+
+/* =========================================
+   5. GENERAL UTILITIES
+   ========================================= */
+.product-main-layout { display: grid; grid-template-columns: 90px 1fr 1.2fr; gap: 30px; margin-bottom: 50px; }
+.star.filled { color: #facc15; }
+.review-card { background: #fff; border: 1px solid #f1f5f9; transition: 0.3s; }
+.review-card:hover { border-color: #00c6fb; transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 198, 251, 0.15); }
+
+/* =========================================
+   1. GLOBAL PAGE BACKGROUND
+   ========================================= */
+.product-page-wrapper {
+  background: linear-gradient(135deg, #00c6fb 0%, #005bea 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.compact-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 1100px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================
+   2. CONTINUOUS GLOWING PRICE
+   ========================================= */
+.current-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ff0055;
+  margin-right: 15px;
+  /* Continuous pulse animation */
+  animation: priceGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes priceGlow {
+  from {
+    text-shadow: 0 0 5px rgba(255, 0, 85, 0.3), 0 0 10px rgba(255, 0, 85, 0.1);
+    transform: scale(1);
+  }
+  to {
+    text-shadow: 0 0 25px rgba(255, 0, 85, 0.7), 0 0 50px rgba(255, 0, 85, 0.4);
+    transform: scale(1.03);
+    color: #ff3377;
+  }
+}
+
+/* =========================================
+   3. SMOOTH MOUSE MOVEMENT FOR SHOE
+   ========================================= */
+.main-image-stage {
+  perspective: 1000px; /* Creates a 3D space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+}
+
+.main-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Smooth transition for the transform */
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d;
+}
+
+.hero-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  /* Realistic drop shadow */
+  filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.25));
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hover effect: 3D Tilt and Lift */
+.main-image-container:hover .hero-image {
+  transform: rotateX(8deg) rotateY(-8deg) scale(1.08) translateY(-15px);
+  filter: drop-shadow(0 35px 45px rgba(0, 0, 0, 0.35));
+}
+
+
+/* =========================================
+   4. OTHER STYLES (Kept from previous version)
+   ========================================= */
+.specs-list {
+  list-style: none; padding: 20px; background: #f8f9fa; border-radius: 12px; border: 1px solid #e9ecef; margin-bottom: 25px; font-size: 0.95rem; color: #555;
+}
+.specs-list li { display: flex; justify-content: space-between; border-bottom: 1px solid #e9ecef; padding-bottom: 10px; margin-bottom: 10px; }
+.specs-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.specs-list strong { color: #333; font-weight: 600; }
+
+.write-review-container {
+  margin-top: 40px; padding: 30px; border-radius: 20px; background: #fff; border: 2px solid transparent; animation: neonBreath 3s infinite alternate;
+}
+@keyframes neonBreath {
+  0% { box-shadow: 0 0 5px rgba(0, 198, 251, 0.2); border-color: rgba(0, 198, 251, 0.3); }
+  100% { box-shadow: 0 0 25px rgba(0, 198, 251, 0.6); border-color: #00c6fb; }
+}
+.write-review-container h4 { margin-top: 0; background: linear-gradient(90deg, #ff0055, #00c6fb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; font-size: 1.5rem; margin-bottom: 20px; }
+.form-input, .form-textarea, .form-select { background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; transition: 0.3s; border-radius: 8px; }
+.form-input:focus, .form-textarea:focus { background: #fff; border-color: #ff0055; box-shadow: 0 0 15px rgba(255, 0, 85, 0.2); outline: none; }
+
+.save-badge.pulse { background: #ff0055; color: white; padding: 5px 10px; border-radius: 6px; font-size: 0.8rem; animation: pulseRed 2s infinite; }
+@keyframes pulseRed { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 85, 0.7); } 70% { transform: scale(1.05); box-shadow: 0 0 10px 10px rgba(255, 0, 85, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 85, 0); } }
+
+.btn-delete-review { background: transparent; border: none; font-size: 1.2rem; cursor: pointer; color: #ef4444; transition: all 0.3s; padding: 8px; border-radius: 50%; }
+.btn-delete-review:hover { background: #fee2e2; box-shadow: 0 0 15px rgba(239, 68, 68, 0.5); transform: rotate(15deg) scale(1.1); }
+
+.close-corner-btn, .close-modal-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #64748b; transition: 0.3s; position: absolute; right: 25px; top: 20px; }
+.close-corner-btn:hover { color: #ff0055; transform: rotate(90deg); }
+
+.btn-buy.glow-hover-orange { background: linear-gradient(135deg, #ff0055, #ff5e00); box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4); }
+.btn-buy.glow-hover-orange:hover { box-shadow: 0 0 25px rgba(255, 0, 85, 0.8); }
+.btn-cart.glow-hover { background: linear-gradient(135deg, #fbbf24, #f59e0b); box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4); }
+.btn-cart.glow-hover:hover { box-shadow: 0 0 25px rgba(251, 191, 36, 0.8); }
+
+.product-main-layout { display: grid; grid-template-columns: 90px 1fr 1.2fr; gap: 30px; margin-bottom: 50px; }
+.star.filled { color: #facc15; }
+.review-card { background: #fff; border: 1px solid #f1f5f9; transition: 0.3s; }
+.review-card:hover { border-color: #00c6fb; transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 198, 251, 0.15); }
+
+/* =========================================
+   1. GLOBAL PAGE & TEXT FIXES
+   ========================================= */
+.product-page-wrapper {
+  background: linear-gradient(135deg, #00c6fb 0%, #005bea 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Ensure ALL text inside the card is readable */
+.product-desc {
+  color: #111 !important; /* Pitch Black */
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.compact-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 1100px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  color: #000; /* Default text color black */
+}
+
+/* =========================================
+   2. SHOE DETAILS (BLACK TEXT)
+   ========================================= */
+.specs-list {
+  list-style: none;
+  padding: 20px;
+  background: #f1f3f5; /* Light Gray Background */
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  color: #000 !important; /* Force Black */
+}
+
+.specs-list li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.specs-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.specs-list strong {
+  color: #000; /* Black Labels */
+  font-weight: 700;
+}
+
+/* =========================================
+   3. 3D MOUSE MOVEMENT STAGE
+   ========================================= */
+.main-image-stage {
+  perspective: 1000px; /* Essential for 3D effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  cursor: grab;
+}
+
+.main-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  /* Transition is handled inline in JS for smoothness */
+}
+
+.hero-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 30px rgba(0, 0, 0, 0.4)); /* Deep shadow */
+  pointer-events: none; /* Let mouse events pass to container */
+}
+
+/* =========================================
+   4. OTHER STYLES (Kept & Refined)
+   ========================================= */
+.current-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #d90429;
+  margin-right: 15px;
+  animation: priceGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes priceGlow {
+  from { text-shadow: 0 0 5px rgba(217, 4, 41, 0.3); transform: scale(1); }
+  to { text-shadow: 0 0 20px rgba(217, 4, 41, 0.6); transform: scale(1.05); }
+}
+
+/* Review Text Color Fix */
+.review-card p {
+  color: #222; /* Dark gray for reviews */
+}
+
+.write-review-container {
+  margin-top: 40px; padding: 30px; border-radius: 20px; background: #fff; border: 2px solid transparent; animation: neonBreath 3s infinite alternate;
+}
+@keyframes neonBreath {
+  0% { box-shadow: 0 0 5px rgba(0, 198, 251, 0.2); border-color: rgba(0, 198, 251, 0.3); }
+  100% { box-shadow: 0 0 25px rgba(0, 198, 251, 0.6); border-color: #00c6fb; }
+}
+
+.write-review-container h4 { margin-top: 0; background: linear-gradient(90deg, #ff0055, #00c6fb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; font-size: 1.5rem; margin-bottom: 20px; }
+.form-input, .form-textarea, .form-select { background: #f8fafc; border: 1px solid #e2e8f0; color: #000; transition: 0.3s; border-radius: 8px; }
+.form-input:focus, .form-textarea:focus { background: #fff; border-color: #ff0055; box-shadow: 0 0 15px rgba(255, 0, 85, 0.2); outline: none; }
+
+.save-badge.pulse { background: #ff0055; color: white; padding: 5px 10px; border-radius: 6px; font-size: 0.8rem; animation: pulseRed 2s infinite; }
+@keyframes pulseRed { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 85, 0.7); } 70% { transform: scale(1.05); box-shadow: 0 0 10px 10px rgba(255, 0, 85, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 85, 0); } }
+
+.btn-delete-review { background: transparent; border: none; font-size: 1.2rem; cursor: pointer; color: #ef4444; transition: all 0.3s; padding: 8px; border-radius: 50%; }
+.btn-delete-review:hover { background: #fee2e2; box-shadow: 0 0 15px rgba(239, 68, 68, 0.5); transform: rotate(15deg) scale(1.1); }
+
+.close-corner-btn, .close-modal-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #64748b; transition: 0.3s; position: absolute; right: 25px; top: 20px; }
+.close-corner-btn:hover { color: #ff0055; transform: rotate(90deg); }
+
+.btn-buy.glow-hover-orange { background: linear-gradient(135deg, #ff0055, #ff5e00); box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4); }
+.btn-buy.glow-hover-orange:hover { box-shadow: 0 0 25px rgba(255, 0, 85, 0.8); }
+.btn-cart.glow-hover { background: linear-gradient(135deg, #fbbf24, #f59e0b); box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4); }
+.btn-cart.glow-hover:hover { box-shadow: 0 0 25px rgba(251, 191, 36, 0.8); }
+
+.product-main-layout { display: grid; grid-template-columns: 90px 1fr 1.2fr; gap: 30px; margin-bottom: 50px; }
+.star.filled { color: #facc15; }
+.review-card { background: #fff; border: 1px solid #f1f5f9; transition: 0.3s; }
+.review-card:hover { border-color: #00c6fb; transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 198, 251, 0.15); }
+
+/* =========================================
+   1. GLOBAL PAGE BACKGROUND
+   ========================================= */
+.product-page-wrapper {
+  background: linear-gradient(135deg, #00c6fb 0%, #005bea 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Ensure all text inside the card is readable */
+.product-desc {
+  color: #333 !important;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.compact-card {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 1100px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  color: #000;
+  margin-bottom: 80px; /* Space for bottom bar */
+}
+
+/* =========================================
+   2. BOTTOM CART BAR (FIXED ALIGNMENT)
+   ========================================= */
+.bottom-cart-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Fixed height for consistency */
+  background: #ffffff; /* Clean White Background */
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+  display: flex; /* Forces horizontal layout */
+  flex-direction: row; /* Aligns items side-by-side */
+  justify-content: space-between; /* Spreads items apart */
+  align-items: center; /* Vertically centers items */
+  padding: 0 40px; /* Padding on sides */
+  z-index: 2000;
+  border-top: 1px solid #eee;
+  animation: slideUpBottom 0.3s ease-out forwards;
+}
+
+@keyframes slideUpBottom {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* Left Section: Name & Price */
+.cart-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cart-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #111;
+  font-weight: 700;
+}
+
+.cart-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.cart-price {
+  color: #ff0055;
+  font-weight: bold;
+}
+
+/* Center Section: Quantity Controls */
+.cart-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f1f3f5;
+  padding: 8px 15px;
+  border-radius: 30px;
+}
+
+.btn-qty {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: 0.2s;
+}
+
+.btn-qty:hover {
+  background: #00c6fb;
+  color: white;
+}
+
+.qty-display {
+  font-weight: bold;
+  font-size: 1.2rem;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Right Section: Remove Button */
+.btn-remove-cart {
+  background: #fee2e2;
+  color: #d90429;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-remove-cart:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* =========================================
+   3. PAYMENT MODAL (FIXED ALIGNMENT)
+   ========================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000; /* Higher than cart bar */
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+.modal-title { 
+  margin-top: 0; 
+  color: #111;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-form label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Inputs */
+.payment-form input, .payment-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9fafb;
+  box-sizing: border-box; /* Fix padding issues */
+}
+
+/* Fix Textarea Height */
+.payment-form textarea {
+  min-height: 80px; /* Reduced height */
+  max-height: 120px;
+  resize: vertical;
+}
+
+/* Location Buttons */
+.location-tools {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-detect-location {
+  flex: 2;
+  background: #00c6fb;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-reset-form {
+  flex: 1;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Form Grid for City/State/Zip */
+.form-grid-3 {
+  display: flex;
+  gap: 10px;
+}
+
+.form-grid-3 input {
+  flex: 1;
+}
+
+.btn-submit-order {
+  margin-top: 10px;
+  background: #ff0055;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-submit-order:hover {
+  background: #d90429;
+}
+
+/* =========================================
+   4. GENERAL STYLES
+   ========================================= */
+.specs-list {
+  list-style: none; padding: 20px; background: #f8f9fa; border-radius: 12px; border: 1px solid #e9ecef; margin-bottom: 25px; color: #333 !important;
+}
+.specs-list li { display: flex; justify-content: space-between; border-bottom: 1px solid #e9ecef; padding-bottom: 10px; margin-bottom: 10px; }
+.specs-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.main-image-stage { perspective: 1000px; display: flex; justify-content: center; align-items: center; height: 450px; position: relative; }
+.main-image-container { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; position: relative; }
+.nav-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.7); border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; }
+.nav-arrow:hover { background: #ff0055; color: white; }
+.nav-arrow.left { left: 10px; }
+.nav-arrow.right { right: 10px; }
+.hero-image { max-width: 85%; max-height: 90%; object-fit: contain; pointer-events: none; }
+
+.review-card { background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 10px; margin-bottom: 15px; }
+.close-modal-btn { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #666; }
+.close-corner-btn { position: absolute; top: 30px; right: 30px; background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #666; }
+
+.product-main-layout { display: grid; grid-template-columns: 90px 1fr 1.2fr; gap: 30px; margin-bottom: 50px; }
+
+/* ... [Keep previous CSS] ... */
+
+/* =========================================
+   BRAND SLIDER STYLES
+   ========================================= */
+.brand-slider-container {
+  background: #00c6fb;
+  padding: 15px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 4px solid #005bea;
+  position: relative;
+}
+
+.brand-track {
+  display: flex;
+  gap: 40px;
+  /* Smooth infinite scrolling */
+  animation: scrollBrands 25s linear infinite; 
+  width: max-content;
+}
+
+.brand-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollBrands {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.brand-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  min-width: 90px;
+}
+
+.brand-item:hover {
+  transform: scale(1.1);
+}
+
+.brand-logo-circle {
+  width: 65px;
+  height: 65px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  margin-bottom: 8px;
+  border: 3px solid #fff;
+  overflow: hidden; /* Ensures image stays inside */
+}
+
+.brand-logo-circle img {
+  width: 70%;  /* Keeps logo size consistent */
+  height: 70%;
+  object-fit: contain; /* Prevents stretching */
+}
+
+.brand-name {
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ... [Keep all previous CSS] ... */
+
+/* =========================================
+   AI & GLOW EFFECTS
+   ========================================= */
+
+/* Button Glow on Hover */
+button, .tag, .nav-btn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover, .tag:hover, .nav-btn:hover {
+  box-shadow: 0 0 15px rgba(0, 198, 251, 0.6), 0 0 30px rgba(0, 91, 234, 0.4);
+  transform: translateY(-2px);
+}
+
+/* AI "Thinking" Border Effect for Cards */
+.product-card {
+  /* ... existing styles ... */
+  position: relative;
+  z-index: 1;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(45deg, #ff0055, #00c6fb, #ff0055);
+  z-index: -1;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-size: 200%;
+  animation: borderGlow 3s linear infinite;
+}
+
+.product-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Heart Button Glow */
+.heart-btn {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+.heart-btn:hover {
+  transform: scale(1.2);
+  background: white;
+}
+
+.heart-btn.active {
+  background: #ff0055; /* Red background when active */
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 0, 85, 0.8); /* Strong Red Glow */
+  animation: heartPulse 0.5s forwards;
+}
+
+@keyframes heartPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1.2); }
+}
+
+/* =========================================
+   TOP RIGHT NAVIGATION (Visited & Home)
+   ========================================= */
+.top-nav-controls {
+  position: absolute; /* Or fixed if you want it to scroll with you */
+  top: 20px;
+  right: 30px;
+  display: flex;
+  gap: 15px;
+  z-index: 100;
+}
+
+.nav-btn {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.nav-btn:hover {
+  background: #00c6fb;
+  border-color: #00c6fb;
+  color: #000;
+}
+
+.nav-btn.home-btn:hover {
+  background: #ff0055;
+  border-color: #ff0055;
+  color: white;
+}
+
+/* Visited Modal / Overlay */
+.visited-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10, 10, 20, 0.95);
+  z-index: 3000;
+  overflow-y: auto;
+  padding: 40px;
+  animation: fadeIn 0.3s ease;
+}
+
+.visited-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.visited-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 20px;
+}
+
+.visited-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* ... [Keep all previous CSS] ... */
+
+/* =========================================
+   AI & GLOW EFFECTS
+   ========================================= */
+
+/* Button Glow on Hover */
+button, .tag, .nav-btn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover, .tag:hover, .nav-btn:hover {
+  box-shadow: 0 0 15px rgba(0, 198, 251, 0.6), 0 0 30px rgba(0, 91, 234, 0.4);
+  transform: translateY(-2px);
+}
+
+/* AI "Thinking" Border Effect for Cards */
+.product-card {
+  /* ... existing styles ... */
+  position: relative;
+  z-index: 1;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(45deg, #ff0055, #00c6fb, #ff0055);
+  z-index: -1;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-size: 200%;
+  animation: borderGlow 3s linear infinite;
+}
+
+.product-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Heart Button Glow */
+.heart-btn {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+.heart-btn:hover {
+  transform: scale(1.2);
+  background: white;
+}
+
+.heart-btn.active {
+  background: #ff0055; /* Red background when active */
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 0, 85, 0.8); /* Strong Red Glow */
+  animation: heartPulse 0.5s forwards;
+}
+
+@keyframes heartPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1.2); }
+}
+
+/* =========================================
+   TOP RIGHT NAVIGATION (Visited & Home)
+   ========================================= */
+.top-nav-controls {
+  position: absolute; /* Or fixed if you want it to scroll with you */
+  top: 20px;
+  right: 30px;
+  display: flex;
+  gap: 15px;
+  z-index: 100;
+}
+
+.nav-btn {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.nav-btn:hover {
+  background: #00c6fb;
+  border-color: #00c6fb;
+  color: #000;
+}
+
+.nav-btn.home-btn:hover {
+  background: #ff0055;
+  border-color: #ff0055;
+  color: white;
+}
+
+/* Visited Modal / Overlay */
+.visited-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10, 10, 20, 0.95);
+  z-index: 3000;
+  overflow-y: auto;
+  padding: 40px;
+  animation: fadeIn 0.3s ease;
+}
+
+.visited-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.visited-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 20px;
+}
+
+.visited-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* ... [Keep previous basic resets] ... */
+
+/* =========================================
+   1. NAVBAR LAYOUT
+   ========================================= */
+.navbar {
+  background: rgba(15, 23, 42, 0.95); 
+  backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between; /* Pushes left and right sections apart */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #00c6fb; 
+  box-shadow: 0 4px 20px rgba(0, 198, 251, 0.2);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+  text-transform: lowercase; /* amazon.in style */
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 198, 251, 0.8);
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* =========================================
+   2. RIGHT NAV ACTIONS (Visited & Home)
+   ========================================= */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between Visited and Home buttons */
+}
+
+/* Visited Button Styles */
+.visited-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.visited-btn:hover, .visited-btn.active {
+  background: #ff0055;
+  border-color: #ff0055;
+  box-shadow: 0 0 15px rgba(255, 0, 85, 0.5);
+}
+
+/* Home Button Styles */
+.home-btn {
+  background: linear-gradient(135deg, #00c6fb, #005bea);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  animation: neonPulse 2s infinite alternate;
+}
+
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 5px rgba(0, 198, 251, 0.5); }
+  100% { box-shadow: 0 0 15px rgba(0, 198, 251, 0.9); }
+}
+
+.home-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #00e5ff, #0072ff);
+}
+
+.nav-item {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  color: white;
+}
+
+.login-link {
+  margin-left: 10px;
+  border: 1px solid #00c6fb;
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+.login-link:hover {
+  background: #00c6fb;
+  color: black;
+}
+
+/* ... [Keep all previous CSS] ... */
+
+/* =========================================
+   NAVBAR ELEMENTS (UPDATED)
+   ========================================= */
+
+/* Menu Toggle Button */
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+/* Size Selector Styles */
+.size-selector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+.size-selector span {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+
+.size-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: 0.2s;
+}
+
+.size-btn:hover, .size-btn.active {
+  background: #00c6fb;
+  border-color: #00c6fb;
+  color: black;
+  font-weight: bold;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: #ff0055;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #d90429;
+}
+
+/* ... [Keep previous CSS] ... */
+
+/* =========================================
+   NAVBAR & CONTROLS
+   ========================================= */
+
+/* Glowing Size Buttons */
+.size-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 30px;
+}
+
+.size-selector span {
+  color: #a0aec0;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.size-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 8px; /* Softer corners */
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  
+  /* Light Shadow Effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.size-btn:hover, .size-btn.active {
+  background: #00c6fb;
+  border-color: #00c6fb;
+  color: #000;
+  transform: translateY(-2px);
+  /* Glowing Effect */
+  box-shadow: 0 0 15px rgba(0, 198, 251, 0.6), 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+/* User Menu Container */
+.user-menu-container {
+  position: relative;
+  margin-left: 10px;
+}
+
+/* Emoji Button */
+.user-emoji-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.user-emoji-btn:hover {
+  background: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Dropdown Menu */
+.user-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 280px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  padding: 20px;
+  z-index: 2000;
+  border: 1px solid #e2e8f0;
+}
+
+.dropdown-section h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.user-profile-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-circle {
+  width: 50px; height: 50px;
+  background: #00c6fb;
+  color: white;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logout-btn-small {
+  background: #fee2e2;
+  color: #ef4444;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.login-btn-full {
+  width: 100%;
+  background: #00c6fb;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-divider {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 15px 0;
+}
+
+/* Price Inputs */
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-inputs input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* ... [Keep all existing CSS] ... */
+
+/* =========================================
+   LOGIN PAGE STYLES (UPDATED)
+   ========================================= */
+.login-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85); /* Darker background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  backdrop-filter: blur(8px);
+}
+
+.login-card {
+  background: #1a1a2e; /* Dark Theme Card */
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0, 198, 251, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-title {
+  margin-bottom: 5px;
+  font-size: 2rem;
+  background: linear-gradient(to right, #00c6fb, #005bea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-subtitle {
+  color: #a0aec0;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #16213e;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.login-input:focus {
+  border-color: #00c6fb;
+  box-shadow: 0 0 10px rgba(0, 198, 251, 0.3);
+  outline: none;
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #00c6fb, #005bea);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 198, 251, 0.4);
+}
+
+/* DIVIDER */
+.divider {
+  margin: 25px 0;
+  position: relative;
+  text-align: center;
+}
+
+.divider span {
+  background: #1a1a2e;
+  padding: 0 10px;
+  color: #666;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 0; width: 100%;
+  height: 1px;
+  background: #333;
+  z-index: 0;
+}
+
+/* SOCIAL BUTTONS */
+.social-login-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 0.95rem;
+}
+
+.social-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-btn.google {
+  background: white;
+  color: #333;
+}
+
+.social-btn.google:hover {
+  background: #f1f1f1;
+}
+
+.social-btn.facebook {
+  background: #1877F2;
+  color: white;
+}
+
+.social-btn.facebook:hover {
+  background: #1565c0;
+}
+
+/* SAVE PASSWORD POPUP */
+.save-password-popup {
+  animation: fadeIn 0.3s;
+  text-align: center;
+  padding: 10px;
+}
+
+.key-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: bounce 1s infinite;
+}
+
+.save-password-popup h3 {
+  margin: 0 0 10px 0;
+  color: white;
+}
+
+.save-password-popup p {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: #00c6fb;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #555;
+  padding: 8px 25px;
+  border-radius: 6px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ... [Keep all previous CSS] ... */
+
+/* =========================================
+   ADVANCED LOGIN STYLES
+   ========================================= */
+.login-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10, 10, 10, 0.9); /* Deep dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  backdrop-filter: blur(5px);
+}
+
+.login-card {
+  background: #1a1a2e;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 0 50px rgba(0, 198, 251, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  animation: slideUpFade 0.4s ease-out;
+}
+
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.login-title {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  background: linear-gradient(to right, #00c6fb, #005bea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.login-subtitle {
+  color: #a0aec0;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px 15px;
+  border-radius: 10px;
+  border: 1px solid #2d3748;
+  background: #0f172a;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.login-input:focus {
+  border-color: #00c6fb;
+  box-shadow: 0 0 0 2px rgba(0, 198, 251, 0.2);
+  outline: none;
+}
+
+.error-msg {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  margin: 0;
+  background: rgba(255, 77, 77, 0.1);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.notification-banner {
+  background: #00c6fb;
+  color: #000;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.form-options {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.85rem;
+}
+
+.link-text {
+  color: #00c6fb;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link-text:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  background: linear-gradient(90deg, #00c6fb, #005bea);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 198, 251, 0.3);
+}
+
+/* SOCIAL BUTTONS */
+.emoji-icon {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+.social-login-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.social-btn.google {
+  background: #DB4437;
+}
+
+.social-btn.facebook {
+  background: #4267B2;
+}
+
+.social-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.switch-auth {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #a0aec0;
+}
+
+.switch-auth span {
+  color: #00c6fb;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.social-mock-view {
+  padding: 30px;
+}
+
+.spinner {
+  width: 40px; height: 40px;
+  border: 4px solid rgba(255,255,255,0.1);
+  border-top-color: #00c6fb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* ... [Keep all previous CSS] ... */
+
+/* =========================================
+   LOGIN VISIBILITY FIX
+   ========================================= */
+.login-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10, 10, 10, 0.9); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  backdrop-filter: blur(5px);
+}
+
+.login-card {
+  background: #1a1a2e;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 0 50px rgba(0, 198, 251, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  
+  /* FORCE VISIBILITY */
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  z-index: 3001; /* Above overlay */
+  
+  animation: simpleFadeIn 0.3s ease-out;
+}
+
+@keyframes simpleFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ... [Rest of Login Styles: login-title, input, btn, etc.] ... */
+.login-title {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  background: linear-gradient(to right, #00c6fb, #005bea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.login-subtitle {
+  color: #a0aec0;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px 15px;
+  border-radius: 10px;
+  border: 1px solid #2d3748;
+  background: #0f172a;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.login-input:focus {
+  border-color: #00c6fb;
+  box-shadow: 0 0 0 2px rgba(0, 198, 251, 0.2);
+  outline: none;
+}
+
+.error-msg {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  background: rgba(255, 77, 77, 0.1);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.login-btn {
+  background: linear-gradient(90deg, #00c6fb, #005bea);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.social-login-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+
+.social-btn.google { background: #DB4437; }
+.social-btn.facebook { background: #4267B2; }
+
+.divider {
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+}
+.divider span {
+  background: #1a1a2e;
+  padding: 0 10px;
+  color: #666;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 0; width: 100%; height: 1px;
+  background: #333;
+  z-index: 0;
+}
+
+/* ... [Keep all previous CSS] ... */
+
+/* =========================================
+   LOGIN MODAL STYLES
+   ========================================= */
+.login-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 3000; backdrop-filter: blur(5px);
+}
+
+.login-card {
+  background: #1a1a2e;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%; max-width: 420px;
+  text-align: center;
+  position: relative; /* For close button */
+  box-shadow: 0 0 50px rgba(0, 198, 251, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* CLOSE BUTTON */
+.close-modal-btn {
+  position: absolute;
+  top: 15px; right: 15px;
+  background: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.2s;
+}
+.close-modal-btn:hover { color: white; transform: scale(1.1); }
+
+/* SOCIAL BUTTONS (Main Screen) */
+.social-login-buttons {
+  display: flex; gap: 15px; margin-top: 15px;
+}
+
+.social-btn {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 12px;
+  border-radius: 8px; border: none;
+  font-weight: 600; cursor: pointer;
+  transition: 0.2s; color: white;
+  font-size: 0.95rem;
+}
+
+.social-btn img { width: 20px; height: 20px; }
+.social-btn.google { background: white; color: #333; }
+.social-btn.google:hover { background: #f1f1f1; }
+.social-btn.facebook { background: #1877F2; }
+.social-btn.facebook:hover { background: #166fe5; }
+
+
+/* =========================================
+   PROVIDER SIMULATION (Google / Facebook)
+   ========================================= */
+.provider-mode {
+  background: white !important; /* Force white background for Google/FB */
+  color: #333 !important;
+  padding: 30px !important;
+}
+
+.provider-logo { height: 30px; margin-bottom: 20px; }
+
+/* GOOGLE FORM STYLES */
+.google-theme { text-align: center; padding: 10px; }
+.google-theme h3 { font-weight: 500; font-size: 1.5rem; margin-bottom: 10px; }
+.google-theme p { font-size: 1rem; color: #202124; margin-bottom: 30px; }
+
+.google-input {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #202124;
+  outline: none;
+}
+.google-input:focus { border: 2px solid #1a73e8; padding: 12px 14px; /* Adjust for border width */ }
+
+.provider-actions {
+  display: flex; justify-content: space-between; align-items: center; margin-top: 40px;
+}
+.link-blue { color: #1a73e8; font-weight: 600; cursor: pointer; font-size: 0.9rem; }
+.google-next-btn {
+  background: #1a73e8; color: white; border: none;
+  padding: 10px 24px; border-radius: 4px; font-weight: bold; cursor: pointer;
+}
+
+/* FACEBOOK FORM STYLES */
+.facebook-theme { text-align: center; padding: 5px; }
+.facebook-theme p { font-size: 1.1rem; margin-bottom: 15px; }
+
+.fb-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  background: #fff;
+}
+.fb-login-btn {
+  width: 100%;
+  background: #1877f2;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 48px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.fb-footer {
+  margin-top: 20px;
+  display: flex; justify-content: space-between;
+  font-size: 0.9rem; color: #1877f2;
+}
+.fb-footer span { cursor: pointer; }
+.fb-footer span:hover { text-decoration: underline; }
+
+/* ... [Keep all previous CSS] ... */
+
+/* =========================================
+   AI PROFILE & GLOWING EFFECTS
+   ========================================= */
+.avatar-circle {
+  width: 50px; height: 50px;
+  background: linear-gradient(135deg, #00c6fb, #005bea);
+  color: white;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+}
+
+/* AI GLOW ANIMATION */
+.ai-profile-glow {
+  box-shadow: 0 0 15px rgba(0, 198, 251, 0.8), 0 0 30px rgba(0, 91, 234, 0.4);
+  border: 2px solid #fff;
+  animation: aiPulse 2s infinite;
+}
+
+@keyframes aiPulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 198, 251, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 198, 251, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 198, 251, 0); }
+}
+
+/* =========================================
+   LOGIN MODAL UPDATES
+   ========================================= */
+.close-modal-btn {
+  position: absolute;
+  top: 15px; right: 15px;
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 20;
+  line-height: 1;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.close-modal-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.link-text {
+  color: #00c6fb; cursor: pointer; font-size: 0.85rem; text-decoration: none;
+}
+.link-text:hover { text-decoration: underline; text-shadow: 0 0 5px #00c6fb; }
+
+/* Form Options (Forgot Password align) */
+.form-options {
+  display: flex; justify-content: flex-end; margin-bottom: 5px;
+}
+
+/* Google/FB Input Fixes */
+.google-input, .fb-input {
+  width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ccc;
+}
+
+/* ... [Keep all previous CSS] ... */
+
+/* =========================================
+   AI PROFILE GLOW
+   ========================================= */
+.avatar-circle {
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, #00c6fb, #005bea);
+  color: white;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Glowing Pulse Animation */
+.ai-profile-glow {
+  box-shadow: 0 0 10px #00c6fb, 0 0 20px #00c6fb;
+  border: 2px solid white;
+  animation: neonPulse 2s infinite alternate;
+}
+
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 10px #00c6fb, 0 0 20px #00c6fb; transform: scale(1); }
+  100% { box-shadow: 0 0 15px #00c6fb, 0 0 35px #00c6fb, 0 0 50px #005bea; transform: scale(1.05); }
+}
+
+/* =========================================
+   LOGIN & AI SCANNER STYLES
+   ========================================= */
+.login-card {
+  position: relative; /* Crucial for close button */
+  background: rgba(15, 23, 42, 0.95); /* Dark Tech Background */
+  border: 1px solid rgba(0, 198, 251, 0.3);
+  box-shadow: 0 0 50px rgba(0, 198, 251, 0.2);
+}
+
+/* CLOSE BUTTON - Top Right */
+.close-modal-btn {
+  position: absolute;
+  top: 15px; 
+  right: 15px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 100;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: 0.3s;
+}
+.close-modal-btn:hover { background: #ff0055; transform: rotate(90deg); }
+
+/* AI SCANNING ANIMATION */
+.ai-scanning-overlay {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 300px; color: #00c6fb; position: relative; overflow: hidden;
+}
+
+.ai-icon-pulse {
+  font-size: 4rem; margin-bottom: 20px; animation: pulseIcon 1s infinite;
+}
+@keyframes pulseIcon {
+  0% { opacity: 0.5; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1.1); }
+}
+
+.scanner-line {
+  position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+  background: #00c6fb; box-shadow: 0 0 10px #00c6fb;
+  animation: scanDown 2s infinite linear;
+}
+@keyframes scanDown {
+  0% { top: 0%; opacity: 0; } 100% { top: 100%; opacity: 0; }
+}
+
+/* ... [Keep Provider Form Styles from previous] ... */
+
+/* ... [Keep all previous CSS] ... */
+
+/* =========================================
+   LOGIN CARD & CLOSE BUTTON FIX
+   ========================================= */
+.login-card {
+  position: relative; /* Anchor for close button */
+  background: rgba(15, 23, 42, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 0 50px rgba(0, 198, 251, 0.2);
+  border: 1px solid rgba(0, 198, 251, 0.3);
+  color: white;
+  animation: fadeIn 0.3s ease-out;
+  overflow: visible; /* Allow close button to be seen clearly */
+}
+
+/* CORRECT CLOSE BUTTON POSITION */
+.close-modal-btn {
+  position: absolute;
+  top: 10px;    /* 10px from top */
+  right: 10px;  /* 10px from right */
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2000; /* Ensure above everything else */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.close-modal-btn:hover {
+  background: #ff0055;
+  border-color: #ff0055;
+  transform: rotate(90deg);
+}
+
+/* =========================================
+   FORM VALIDATION (RED WARNINGS)
+   ========================================= */
+.input-error {
+  border: 2px solid #ff4d4d !important;
+  background: rgba(255, 77, 77, 0.1) !important;
+  animation: shake 0.3s ease-in-out;
+}
+
+.field-warning {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  margin: 5px 0 10px;
+  text-align: left;
+  font-weight: 500;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* =========================================
+   PROVIDER FORMS (Refined)
+   ========================================= */
+.provider-mode {
+  background: white !important;
+  color: #333 !important;
+  padding: 30px !important;
+}
+
+/* Google Inputs */
+.google-input {
+  width: 100%; padding: 13px 15px;
+  border: 1px solid #dadce0; border-radius: 4px;
+  font-size: 1rem; color: #202124; outline: none;
+}
+.google-input:focus { border: 2px solid #1a73e8; }
+
+/* Facebook Theme */
+.fb-header {
+  background: #1877f2;
+  margin: -30px -30px 20px -30px; /* Stretch to edges */
+  padding: 15px;
+  border-radius: 20px 20px 0 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.fb-input {
+  width: 100%; padding: 14px 16px;
+  border: 1px solid #dddfe2; border-radius: 6px;
+  font-size: 1rem; margin-bottom: 12px; background: #f5f6f7;
+}
+
+.fb-login-btn {
+  width: 100%; background: #1877f2; color: white;
+  font-size: 1.2rem; padding: 12px; border: none;
+  border-radius: 6px; font-weight: bold; cursor: pointer;
+}
+
+/* --- GLOBAL ANIMATED CLOSE BUTTON --- */
+.btn-close-animated {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 1000;
+  background: white;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(51, 51, 51);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-close-animated:hover {
+  transform: scale(1.1) rotate(90deg); /* Rotate Animation */
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 198, 251, 0.6); /* Blue/Cyan Glow */
+  border-color: #00c6fb;
+  color: #00c6fb;
+}
+
+/* =========================================
+   📱 MOBILE RESPONSIVENESS (Media Queries)
+   ========================================= */
+
+/* Tablet & Smaller Laptops (Max Width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 20px;
+  }
+}
+
+/* Mobile Devices (Max Width: 768px) */
+@media screen and (max-width: 768px) {
+  
+  /* --- 1. NAVBAR ADJUSTMENTS --- */
+  .navbar {
+    flex-direction: column; /* Stack logo and buttons vertically */
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .navbar-left {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Make size selector scrollable horizontally */
+  .size-selector {
+    width: 100%;
+    overflow-x: auto; /* Scroll sideways */
+    white-space: nowrap;
+    padding-bottom: 5px;
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+
+  /* --- 2. PRODUCT GRID (2 Columns) --- */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on mobile */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .product-card {
+    padding: 10px;
+  }
+
+  .image-container {
+    height: 140px; /* Smaller image area */
+  }
+
+  /* --- 3. PRODUCT DETAILS PAGE --- */
+  .product-main-layout {
+    grid-template-columns: 1fr; /* Stack everything in 1 column */
+    gap: 20px;
+  }
+
+  /* Move thumbnails below the main image */
+  .thumbs-sidebar {
+    flex-direction: row; /* Horizontal thumbs */
+    order: 2; /* Move below main image */
+    overflow-x: auto;
+    justify-content: center;
+  }
+
+  .main-image-stage {
+    order: 1; /* Main image on top */
+    height: 300px; /* Smaller height */
+  }
+
+  .details-panel {
+    order: 3; /* Details at bottom */
+    padding-left: 0;
+    text-align: center; /* Center text on mobile */
+  }
+
+  .details-panel h1 {
+    font-size: 1.8rem;
+  }
+
+  .price-row, .rating-row {
+    justify-content: center;
+  }
+
+  /* --- 4. MODALS (Login & Payment) --- */
+  .login-container, 
+  .modal-content, 
+  .compact-card {
+    width: 95% !important; /* Take up mostly full width */
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .form-grid-3 {
+    flex-direction: column; /* Stack city/state/zip inputs */
+  }
+
+  .login-overlay {
+    align-items: flex-start; /* Align to top to allow scrolling if needed */
+    padding-top: 50px;
+    overflow-y: auto;
+  }
+
+  /* --- 5. CART BAR --- */
+  .bottom-cart-bar {
+    padding: 10px 15px;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .cart-left h4 {
+    font-size: 0.9rem;
+  }
+
+  .btn-remove-cart {
+    padding: 8px;
+    font-size: 1rem;
+  }
+}
+
+/* Very Small Phones (Max Width: 480px) */
+@media screen and (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 item per row for very small phones */
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .visited-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  
+  .brand-animation img {
+    height: 30px; /* Smaller brand logos */
+  }
+}
+
+/* =========================================
+   📱 MOBILE RESPONSIVENESS (Media Queries)
+   ========================================= */
+
+/* Tablet & Smaller Laptops (Max Width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Mobile Devices (Max Width: 768px) */
+@media screen and (max-width: 768px) {
+  
+  /* --- 1. NAVBAR GRID LAYOUT --- */
+  .navbar {
+    display: grid;
+    /* Row 1: Logo (Left) | Actions (Right) */
+    /* Row 2: Size Selector (Full Width) */
+    grid-template-columns: 1fr auto; 
+    grid-template-rows: auto auto;   
+    gap: 15px 10px; /* Vertical gap 15px, Horizontal gap 10px */
+    padding: 15px;
+    align-items: center;
+  }
+
+  /* This "unwraps" the navbar-left div so its children (Logo & Sizes) 
+     become direct grid items of .navbar */
+  .navbar-left {
+    display: contents; 
+  }
+
+  /* Position Logo: Top Left */
+  .navbar-brand {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 1.4rem;
+  }
+
+  /* Position Actions (Visited + Profile): Top Right */
+  .nav-actions {
+    grid-column: 2;
+    grid-row: 1;
+    width: auto;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  /* Visited Button Styling for Mobile */
+  .visited-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  /* Position Size Selector: Row 2, Full Width */
+  .size-selector {
+    grid-column: 1 / -1; /* Spans across entire row */
+    grid-row: 2;
+    width: 100%;
+    margin-left: 0;
+    
+    /* Horizontal Scrolling */
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px; /* Space for scrollbar touch */
+    -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+  }
+
+  /* Hide scrollbar for cleaner look */
+  .size-selector::-webkit-scrollbar {
+    display: none;
+  }
+
+  .size-btn {
+    min-width: 36px; /* Easier to tap */
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  /* --- 2. PRODUCT GRID (2 Columns) --- */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .product-card {
+    padding: 10px;
+  }
+
+  .image-container {
+    height: 120px; /* Adjusted for mobile */
+  }
+
+  .product-info h4 {
+    font-size: 0.9rem; /* Prevent long names breaking layout */
+  }
+
+  /* --- 3. PRODUCT DETAILS PAGE (Stack layout) --- */
+  .product-main-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .thumbs-sidebar {
+    flex-direction: row; /* Horizontal thumbs */
+    order: 2; /* Move below main image */
+    overflow-x: auto;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .main-image-stage {
+    order: 1; /* Main image on top */
+    height: 280px;
+  }
+
+  .details-panel {
+    order: 3;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .details-panel h1 {
+    font-size: 1.8rem;
+  }
+
+  .price-row, .rating-row {
+    justify-content: center;
+  }
+
+  /* --- 4. MODALS (Full Width) --- */
+  .login-container, 
+  .modal-content, 
+  .compact-card {
+    width: 95% !important;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .form-grid-3 {
+    flex-direction: column;
+  }
+
+  /* --- 5. CART BAR --- */
+  .bottom-cart-bar {
+    padding: 10px 15px;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cart-left h4 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Very Small Phones (Max Width: 480px) */
+@media screen and (max-width: 480px) {
+  /* Reduce visited button text to just icon if screen is too small */
+  .visited-btn {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+}

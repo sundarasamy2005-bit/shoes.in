@@ -1,0 +1,83 @@
+.brand-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, #7aa7e9 0%, #9cc2f0 100%);
+  padding: 15px 0;
+  border-bottom: 2px solid #f7b5e6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.brand-track {
+  display: flex;
+  width: max-content;
+  animation: scrollBrands 30s linear infinite;
+  gap: 30px;
+  padding: 0 15px;
+}
+
+.brand {
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.brand img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: filter 0.3s ease;
+}
+
+.brand:hover img {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transform: scale(1.15);
+}
+
+.brand:active {
+  transform: scale(0.95);
+}
+
+/* Infinite scroll animation - moves exactly -50% to loop seamlessly */
+@keyframes scrollBrands {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.brand-wrapper:hover .brand-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-slider {
+    padding: 12px 0;
+  }
+
+  .brand-track {
+    gap: 25px;
+    padding: 0 25px;
+  }
+
+  .brand-logo img {
+    height: 50px;
+  }
+}

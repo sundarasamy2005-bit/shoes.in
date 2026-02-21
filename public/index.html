@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#131921" />
+    <meta name="description" content="Amazon Shoe Store - AI Powered Premium Shopping" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>Amazon Shoe Store | Premium AI Collection</title>
+
+    <style>
+      /* Global Smooth Scroll for the "Back to top" feature */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Force pointer cursor on all interactive UI/UX elements */
+      .pointer, button, a, input[type="checkbox"], input[type="range"] {
+        cursor: pointer !important;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #ffffff;
+        overflow-x: hidden; /* Prevents scrollbars during animations */
+      }
+
+      /* Base animation for page entry */
+      #root {
+        animation: fadeIn 1s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this animated store.</noscript>
+    
+    <div id="root"></div>
+
+    <div id="notification-root" class="animate__animated animate__fadeInUp"></div>
+
+    <script>
+      // Automatically handle "Back to Top" scrolling
+      document.addEventListener('scroll', () => {
+        const topBtn = document.getElementById('back-to-top');
+        if (topBtn) {
+          topBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+        }
+      });
+    </script>
+  </body>
+</html>
