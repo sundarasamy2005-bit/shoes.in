@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "server": "node server.js",
     "ai-logic": "python main.py",
     "dev": "concurrently \"npm start\" \"node server.js\" \"python main.py\""
